@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f3ee;
+    font-family: Work Sans, sans-serif;
+    color: #463f3a;
+    height: 100vh;
+    max-height: 120vh;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.cursive-text {
+    font-family: Cedarville Cursive, cursive;
+}
+
+.color-pink {
+    color: #a3606c;
+}
+
+/*Styles the navigation bar*/
+#top-nav-bar {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: #a3606c;
+    color: #f4f3ee;
+    padding: 1.5vh 1.5vw;
+    overflow: hidden;
+}
+
+#left-nav-bar {
+    font-family: Cedarville Cursive, cursive;
+    font-size: 1.2rem;
+    margin-left: 3px;
+}
+
+.right-nav-bar {
+    display: inline-block;
+}
+
+.right-nav-bar, .right-nav-bar a {
+    color: #f4f3ee;
+    text-decoration: none;
+    position: relative;
+    margin: 3px;
+}
+
+.right-nav-bar a::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: #f4f3ee;
+    transition: width 0.3s ease;
+}
+
+.right-nav-bar a:hover::after {
+    width: 100%;
+}
+
+.right-nav-bar a:visited {
+    color: #f4f3ee;
+}
+
+/*HOME PAGE STYLING*/
+/*Handles the content in the about-me section*/
+#content, #project-content {
+    animation: slideup .7s ease;
+}
+
+#about-me {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10vh auto;
+    gap: 7vh;
+    max-width: 1100px;
+    padding: 0 2rem;
+    align-items: flex-start;
+}
+
+#about-me-polaroid {
+    flex: 0 0 auto;
+    transform: rotate(356deg);
+    background-color: #fcfbf9;
+    padding: 12px 12px 15px 12px;
+    border: 1.5px solid #e1e0db;
+}
+
+
+#about-me-polaroid p {
+    display: flex;
+    justify-content: center;
+    font-family: Cedarville Cursive, cursive;
+    font-size: 1.4rem;
+    margin: 0%;
+    padding: 0%;
+}
+
+#about-me-content {
+    flex: 1;
+    min-width: 280px;
+    margin: 5vh;
+}
+
+#about-me-content h2, h4, p {
+    margin-bottom: 3%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    padding: 3px;
+    font-family: Work Sans, sans-serif;
+    background-color: transparent;
+    color: #a3606c;
+    border: #a3606c solid 1.5px;
+    border-radius: 3px;
+    margin-bottom: 3%;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#socials-list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-left: -3px;
+}
+
+/*Styles the list of social media links and adds a transition to the underline*/
+#socials-list a {
+    margin: 0px 4px 0px 4px;
+    position: relative;
+    color: #463f3a;
+    text-decoration: none;
+}
+
+#socials-list a::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: #a3606c;
+    transition: width 0.3s ease;
+}
+
+#socials-list a:hover::after {
+    width: 100%;
+}
+
+#socials-list a:visited {
+    color: #463f3a;
+}
+
+/*PROJECT PAGE STYLING*/
+#project-content {
+    margin: 9vh 3vw;
+}
+
+.polaroid-info {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 2vw;
+}
+
+#project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.polaroid-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    background-color: #fcfbf9;
+    padding: 12px 12px 15px 12px;
+    border: 1.5px solid #e1e0db;
+    transform: rotate(356deg);
+    text-align: center;
+}
+
+.img-title {
+    color: #a3606c;
+    font-size: 20px;
+    margin:0%;
+}
+
+.img-subtitle {
+    font-size: 14px;
+}
+
+.project-info {
+    width: 28vw;
+    background-color: #fcfbf9;
+    padding: 1vw;
+    border-radius: .5vw;
+}
+
+.info-title {
+    color: #a3606c;
+    font-size: 24px;
+}
+
+.info-tag {
+    display:inline-block;
+    font-size: 12px;
+    background-color: #a3606c;
+    color:#f4f3ee;
+    padding: .3vw;
+    border-radius: .3vw;
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*handles the footer*/
+#footer {
+    display: flex;
+    justify-content: center;
+    color: #c6c5c1;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+/*RESUME PAGE STYLING*/
+.resume-section-titles{
+    font-family: Cedarville Cursive, cursive;
+    font-size: 2em;
+    color: #a3606c;
+    margin-bottom: -15px;
+}
+#resume-content {
+    margin: 10vh auto;
+    gap: 7vh;
+    max-width: 1100px;
+    padding: 0 2rem;
+    align-items: flex-start;
+}
+
+
+#resume-title, #resume-pdf-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume-title {
+    margin-bottom: 0px;
+}
+
+#education-section li {
+    margin-top: .7%;
+    margin-bottom: .7%;
+}
+
+.school-details {
+    font-style: italic;
+    font-size: small;
+}
+
+#workshop-directing li {
+    margin-top: .7%;
+    margin-bottom: .7%;
+}
+
+#boba-shop li {
+    margin-top: .7%;
+    margin-bottom: .7%;
+}
+
+#pengo-project li {
+    margin-top: .7%;
+    margin-bottom: .7%;
+}
+
+#resume-content-technical-skills li {
+    margin-top: .7%;
+    margin-bottom: .7%;
+
+}
+#resume-content-technical-skills a:visited {
+    color:#a3606c;
+}
+
+.bulletpoint-titles-info {
+    list-style: none;
+}
